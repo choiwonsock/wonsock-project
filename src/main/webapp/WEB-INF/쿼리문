@@ -1,0 +1,21 @@
+drop sequence "BOOK_SEQ";
+drop table "BOOK";
+
+CREATE SEQUENCE BOOK_SEQ
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE 1
+ MAXVALUE 99999;
+create table BOOK(
+		NUM number primary key,
+		ISBN number unique,
+		BOOKNAME varchar(100) not null,
+		WRITER varchar(50) not null,
+		PUBLISH varchar(50) not null,
+		PRICE number not null,
+		INTRO varchar(200) not null,
+		ORIFILENAME varchar(200) not null,
+		SAVEFILENAME varchar(200) not null);
+		
+
+		
